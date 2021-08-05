@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Challenge_HangMan_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nzj-iG-5Ai">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WORD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="XGZ-iZ-xtB">
+                                        <rect key="frame" x="40" y="80" width="334" height="388.5"/>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="44"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="guess the word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4B-bZ-9yA">
+                                        <rect key="frame" x="40" y="488.5" width="334" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pFr-aP-XLf">
+                                        <rect key="frame" x="40" y="530" width="334" height="4"/>
+                                        <color key="progressTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </progressView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qKU-Ma-qYW">
+                                        <rect key="frame" x="40" y="554" width="334" height="184"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="O5I-GB-rIb">
+                                                <rect key="frame" x="35" y="0.0" width="264" height="31"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PkC-Xr-9kL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="A">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tuh-a4-Bbk"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JnQ-Af-A1h">
+                                                        <rect key="frame" x="39" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="B">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T2G-vk-LjD"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCP-F6-DHI">
+                                                        <rect key="frame" x="78" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="C">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lzn-sb-l1a"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDu-Q8-oJF">
+                                                        <rect key="frame" x="117" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="D">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qor-6r-AHU"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yze-3B-HHJ">
+                                                        <rect key="frame" x="156" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="E">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mu6-HC-Z9l"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5C-uZ-orn">
+                                                        <rect key="frame" x="195" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="F">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FSC-R3-DM2"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBw-8a-q2L">
+                                                        <rect key="frame" x="234" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="G">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="czE-Hk-OoB"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="2iK-il-SMc">
+                                                <rect key="frame" x="32" y="51" width="270" height="31"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoJ-yC-E5g">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="H">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DYJ-vt-XKc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLm-Em-jJB">
+                                                        <rect key="frame" x="40" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="I">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1tb-57-OeK"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i93-xj-Y1L">
+                                                        <rect key="frame" x="80" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="J">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7od-OR-roA"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TgT-fI-W0z">
+                                                        <rect key="frame" x="120" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="K">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MM1-nh-HXz"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oq2-jz-vWw">
+                                                        <rect key="frame" x="160" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="L">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xvg-a1-oIQ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnB-16-iSX">
+                                                        <rect key="frame" x="200" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="M">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KFx-jf-5Mt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsL-Bd-Ozi">
+                                                        <rect key="frame" x="240" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="N">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VPI-bG-K4a"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZnL-YJ-34g">
+                                                <rect key="frame" x="32" y="102" width="270" height="31"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98r-ZH-kit">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="O">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r22-aK-LKG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXo-Og-gGD">
+                                                        <rect key="frame" x="40" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="P">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C1l-c5-vXM"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8J-DR-j4C">
+                                                        <rect key="frame" x="80" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="Q">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Md-z7-ohi"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seq-Wx-5b3">
+                                                        <rect key="frame" x="120" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="R">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WsR-Jk-HSe"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="581-gd-0NO">
+                                                        <rect key="frame" x="160" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="S">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cSa-DJ-8Td"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KID-pV-F8M">
+                                                        <rect key="frame" x="200" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="T">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lym-iz-xHd"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyH-5m-8sS">
+                                                        <rect key="frame" x="240" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="U">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MmW-dx-Ywn"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0SW-5Q-VAZ">
+                                                <rect key="frame" x="72" y="153" width="190" height="31"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rig-2d-Ko9">
+                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="V">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cna-xE-PcQ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Uf-qV-Vhq">
+                                                        <rect key="frame" x="40" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="W">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bFB-NT-0Jy"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkb-bH-ynr">
+                                                        <rect key="frame" x="80" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="X">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5gh-ec-P0d"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MSo-sB-LP9">
+                                                        <rect key="frame" x="120" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="Y">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fOw-eb-gSh"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBg-M0-I7X">
+                                                        <rect key="frame" x="160" y="0.0" width="30" height="31"/>
+                                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                                        <state key="normal" title="Z">
+                                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="letterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3rp-5W-3cY"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="80" left="40" bottom="80" right="40"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nzj-iG-5Ai" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gop-HJ-SJJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nzj-iG-5Ai" secondAttribute="trailing" id="Saf-lO-v5h"/>
+                            <constraint firstItem="nzj-iG-5Ai" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YVl-Jw-3RS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nzj-iG-5Ai" secondAttribute="bottom" id="pL0-BL-Lbq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="guessLabel" destination="X4B-bZ-9yA" id="9qo-XB-BtM"/>
+                        <outlet property="mistakesProgresBar" destination="pFr-aP-XLf" id="egK-Qi-bTC"/>
+                        <outlet property="wordLabel" destination="XGZ-iZ-xtB" id="vZk-Gm-Wzy"/>
+                        <outletCollection property="lettersButtons" destination="PkC-Xr-9kL" collectionClass="NSMutableArray" id="MD3-N2-fWR"/>
+                        <outletCollection property="lettersButtons" destination="JnQ-Af-A1h" collectionClass="NSMutableArray" id="gbb-cc-TUD"/>
+                        <outletCollection property="lettersButtons" destination="nCP-F6-DHI" collectionClass="NSMutableArray" id="1hN-EW-z8O"/>
+                        <outletCollection property="lettersButtons" destination="kDu-Q8-oJF" collectionClass="NSMutableArray" id="r7h-5F-cCz"/>
+                        <outletCollection property="lettersButtons" destination="Yze-3B-HHJ" collectionClass="NSMutableArray" id="s8h-2f-CZr"/>
+                        <outletCollection property="lettersButtons" destination="L5C-uZ-orn" collectionClass="NSMutableArray" id="KgO-pF-LPv"/>
+                        <outletCollection property="lettersButtons" destination="eBw-8a-q2L" collectionClass="NSMutableArray" id="4hj-Ta-7hr"/>
+                        <outletCollection property="lettersButtons" destination="LoJ-yC-E5g" collectionClass="NSMutableArray" id="0jm-RA-Hwe"/>
+                        <outletCollection property="lettersButtons" destination="NLm-Em-jJB" collectionClass="NSMutableArray" id="snZ-Ni-v9P"/>
+                        <outletCollection property="lettersButtons" destination="i93-xj-Y1L" collectionClass="NSMutableArray" id="nI9-Te-2p8"/>
+                        <outletCollection property="lettersButtons" destination="TgT-fI-W0z" collectionClass="NSMutableArray" id="pZs-t3-ToV"/>
+                        <outletCollection property="lettersButtons" destination="Oq2-jz-vWw" collectionClass="NSMutableArray" id="Tg8-zs-EYe"/>
+                        <outletCollection property="lettersButtons" destination="AnB-16-iSX" collectionClass="NSMutableArray" id="xK6-AM-AVE"/>
+                        <outletCollection property="lettersButtons" destination="YsL-Bd-Ozi" collectionClass="NSMutableArray" id="FbW-Lc-KE5"/>
+                        <outletCollection property="lettersButtons" destination="98r-ZH-kit" collectionClass="NSMutableArray" id="K7k-lz-ifC"/>
+                        <outletCollection property="lettersButtons" destination="SXo-Og-gGD" collectionClass="NSMutableArray" id="TeA-dc-Efe"/>
+                        <outletCollection property="lettersButtons" destination="o8J-DR-j4C" collectionClass="NSMutableArray" id="FPe-Yv-dpG"/>
+                        <outletCollection property="lettersButtons" destination="seq-Wx-5b3" collectionClass="NSMutableArray" id="hT3-12-xBt"/>
+                        <outletCollection property="lettersButtons" destination="581-gd-0NO" collectionClass="NSMutableArray" id="h8P-WB-d0E"/>
+                        <outletCollection property="lettersButtons" destination="KID-pV-F8M" collectionClass="NSMutableArray" id="Z8g-29-saD"/>
+                        <outletCollection property="lettersButtons" destination="dyH-5m-8sS" collectionClass="NSMutableArray" id="B6R-yR-dzo"/>
+                        <outletCollection property="lettersButtons" destination="rig-2d-Ko9" collectionClass="NSMutableArray" id="Qvu-8B-rCs"/>
+                        <outletCollection property="lettersButtons" destination="8Uf-qV-Vhq" collectionClass="NSMutableArray" id="f8N-8Q-mq1"/>
+                        <outletCollection property="lettersButtons" destination="Vkb-bH-ynr" collectionClass="NSMutableArray" id="iHf-Dn-FuJ"/>
+                        <outletCollection property="lettersButtons" destination="MSo-sB-LP9" collectionClass="NSMutableArray" id="xW1-aR-S1o"/>
+                        <outletCollection property="lettersButtons" destination="FBg-M0-I7X" collectionClass="NSMutableArray" id="aDI-em-9Vw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-213.04347826086959" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
